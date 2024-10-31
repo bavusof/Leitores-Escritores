@@ -21,7 +21,7 @@ public class Writer implements Runnable {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }*/
-        System.out.println("oi, sou um writer!");
+        System.out.println("oi, sou um writer!!");
         Thread.currentThread().interrupt();
     }
 }
