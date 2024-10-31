@@ -1,15 +1,18 @@
-package estrutura;
+package estrutura.dados;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Leitura {
-    public static void main(String[] args) {
-        String fileName = "bd.txt"; 	// Nome do arquivo de texto
-        List<String> wordsList = new ArrayList<>();		// Estrutura utilizada
+public class Data {
+    List<String> wordsList = new ArrayList<>();	
 
+    public Data(String fileName){
+        lerArquivo(fileName);
+    }
+
+    public void lerArquivo(String fileName){
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -33,7 +36,9 @@ public class Leitura {
 
         // Imprime o array
         for (String word : wordsArray) {
-            System.out.println(word);
+            //System.out.println(word);
         }
     }
+    
 }
+    
